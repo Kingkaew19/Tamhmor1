@@ -1,0 +1,87 @@
+﻿@model WebUITamhmor.Models.DoctorModel
+@*@model Web.Fiction.Models.Fiction*@
+@{
+    ViewData["Title"] = "DetailDoctor";
+}
+<style>
+    img {
+        border-radius: 8px;
+    }
+
+    table, th, td {
+        border: 1px solid #ddd;
+        border-collapse: collapse;
+        border-radius: 5px;
+    }
+
+    th, td {
+        padding: 15px;
+        text-align: center;
+    }
+
+    th {
+        background-color: #76b5df;
+        color: white;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 23px;
+    }
+
+    td {
+        color: black;
+        font-family: 'K2D', sans-serif;
+        font-size: 15px;
+    }
+
+    /*ul {
+        list-style-type: none;
+        margin: 1;
+        padding: 30px;
+        overflow: hidden;
+        background-color: #A8DEE0;
+    }*/
+
+    li {
+        font-size: 30px;
+        float: left;
+        font-family: 'K2D', sans-serif;
+    }
+</style>
+<body>
+
+    @*<ul>
+            <li>ประวัติเเพทย์</li>
+        </ul>*@
+
+    <div class="container">
+
+        @*@foreach (var item in Model)
+            {*@
+        <div class="col" style="margin-right: 300px; font-family: 'Courier New', Courier, monospace;">
+            <p class="row" style="font-size: 40px;">
+                @*@Html.DisplayNameFor(model => model.FId)*@
+                @Html.DisplayFor(model => Model.Dfname)
+                @Html.DisplayFor(model => Model.Dlname)
+            </p>
+
+            <p class="row" style="font-size: 22px;">แผนก : @Html.DisplayFor(model => Model.Ddepartment)</p>
+            <p class="row" style="font-size: 22px;">อายุ : @Html.DisplayFor(model => Model.Dage)</p>
+            <p class="row" style="font-size: 22px;">ประวัติการศึกษา : มหาวิทยาลัยจุฬาลงหรณ์(เเพทยศาสตร์) ปริญญาตรี</p>
+            <p class="row" style="font-size: 22px;">เเพทย์ประจำโรงพยาบาล : @Html.DisplayFor(model => Model.Dhospital)</p>
+            @*<p class="row" style="font-size: 22px;">จำนวนการรักษา : 200 คน</p>*@
+            <p class="row" style="font-size: 22px;">ความชำนาญเฉพาะทาง : @Html.DisplayFor(model => Model.Dexpertise)</p>
+            <p class="row" style="font-size: 22px;">ค่าปรึกษา : @Html.DisplayFor(model => Model.Dprice)</p>
+        </div>
+
+
+        <div style="text-align: right;">
+            <button type="button" class="btn btn-info" style="width: 100px; color: white; font-size: 16px;">เเชท</button>
+        </div>
+
+        @*}*@
+    </div>
+
+</body>
+
+
+
+
