@@ -1,0 +1,76 @@
+﻿@model IEnumerable<WebUITamhmor.Models.DoctorModel>
+@{
+    ViewData["Title"] = "ListDoctor";
+}
+
+
+<nav class="navbar navbar-dark bg-primary">
+    <div style="margin:30px">
+        <h1>รวมแผนก</h1>
+    </div>
+</nav>
+@*<div>
+    <table>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Did)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dfname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dlname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dsex)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ddepartment)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dhospital)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dexpertise)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dprice)
+            </td>
+
+        </tr>
+        }
+    </table>
+</div>*@
+<div class="container" style="margin-top: 50px; " >
+    @foreach (var item in Model)
+    {
+        <div class="row table-bordered border-0" style="padding: 20px; margin-bottom: 20px;">
+            <div class="col">
+            <div class="col">
+                @Html.DisplayFor(modelItem => item.Dimage)
+            </div>
+            <div class="col" style="margin:5px;">
+                <div class="row">
+                    @Html.DisplayFor(modelItem => item.Dfname)
+                    @Html.DisplayFor(modelItem => item.Dlname)
+                    <div>
+                        @Html.DisplayFor(modelItem => item.Dsex)
+                    </div>
+                    <div>
+                        @Html.DisplayFor(modelItem => item.Dhospital)
+                    </div>
+                    <div>
+                        @Html.ActionLink("ดูรายละเอียด", "DetailDoctor", new { id = item.Did })
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    }
+</div>

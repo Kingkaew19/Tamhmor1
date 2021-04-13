@@ -1,0 +1,74 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <meta name="google-signin-scope" content="profile email"> -->
+    <meta name="google-signin-client_id" content="298941742764-k15eue4nbi8lohl9g5fmgpfhf77r2hik.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+</head>
+<body>
+    <div class="container">
+        <h2 class="position-absolute ">Login</h2>
+        <div class='g-signin2' data-onsuccess="onSignIn"></div>
+    </div>
+    
+
+    <script>
+        function onSignIn(googleUser) {
+            if (navigator.googleUser) {
+                navigator.googleUser.onSignIn();
+            } else {
+                x.innerHTML = "Error.";
+            }
+        }
+    </script>
+
+    <script>
+            function onSignIn(userInfo) {
+                var result = '';
+
+                // Useful data for your client-side scripts:
+                var profile = userInfo.getBasicProfile();
+
+                result += "ID: " + profile.getId() + "\n";
+                result += "Full Name:  " + profile.getName() + "\n";
+                result += "Given Name: " + profile.getGivenName() + "\n";
+                result += "Family Name: " + profile.getFamilyName() + "\n";
+                result += "Email: " + profile.getEmail() + "\n";
+                result += "ID Token: " + userInfo.getAuthResponse().id_token + "\n";
+
+                document.getElementById("result").value = result;
+
+                if (result == '') {
+                    page = (page % pageCount) + 1;
+                    display("next, page now " + page);
+                }
+                else {
+                    MessageBox.Show("Invalid username or password");
+                }
+            };
+
+
+        </script>
+
+    @*<script>
+            function onSignIn(googleUser) {
+                var profile = googleUser.getBasicProfile();
+                console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+                console.log('Name: ' + profile.getName());
+                console.log('Image URL: ' + profile.getImageUrl());
+                console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+
+                document.getElementById("profile").value = profile;
+
+
+            };
+        </script>*@
+</body>
+</html>
