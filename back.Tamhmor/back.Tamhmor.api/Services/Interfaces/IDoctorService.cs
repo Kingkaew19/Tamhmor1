@@ -10,6 +10,7 @@ namespace back.Tamhmor.api.Services.Interfaces
     {
         List<DoctorModel> getdoctor(int Did);
         List<DoctorModel> departmentdoctor();
+        List<DoctorModel> searchdoctor();
     }
 
     

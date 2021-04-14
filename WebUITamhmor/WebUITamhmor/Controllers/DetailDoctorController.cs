@@ -1,6 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -14,10 +16,11 @@ namespace WebUITamhmor.Controllers
     public class DetailDoctorController : Controller
     {
         string Baseurl = "https://localhost:44305";
-        
+
         public async Task<ActionResult> DetailDoctor(int Did)
         {
-            List<DoctorModel> DoctorInfo = new List<DoctorModel>(Did);
+           
+            List<DoctorModel> DoctorInfo = new List<DoctorModel>();
             using (var client = new HttpClient())
             {
                 //Passing service base url  
@@ -39,9 +42,13 @@ namespace WebUITamhmor.Controllers
                     Debug.WriteLine("====================");
 
                     //Deserializing the response recieved from web api and storing into the Employee list  
-                    DoctorInfo = JsonConvert.DeserializeObject<List<DoctorModel>>(DoctorResponse);
+                    var tempDataList = JsonConvert.DeserializeObject<List<DoctorModel>>(DoctorResponse);
                     // check Dsex map value
-                    Debug.WriteLine(DoctorInfo);
+                    //Debug.WriteLine(DoctorInfo);
+                    //var test = tempDataList.Find(x => x.Did == Did);
+                    //DoctorInfo.Clear();
+                    DoctorInfo.Add(tempDataList.Find(x => x.Did == Did));
+
 
 
 
@@ -53,7 +60,7 @@ namespace WebUITamhmor.Controllers
             }
         }
 
-        public async Task<ActionResult> ListDoctor()
+        public async Task<ActionResult> ListDoctor(string Ddepartment)
         {
 
             List<DoctorModel> DoctorInfo = new List<DoctorModel>();
@@ -78,9 +85,13 @@ namespace WebUITamhmor.Controllers
                     Debug.WriteLine("====================");
 
                     //Deserializing the response recieved from web api and storing into the Employee list  
-                    DoctorInfo = JsonConvert.DeserializeObject<List<DoctorModel>>(DoctorResponse);
+                    var tempData = JsonConvert.DeserializeObject<List<DoctorModel>>(DoctorResponse);
+
+
                     // check Dsex map value
-                    Debug.WriteLine(DoctorInfo);
+                    //Debug.WriteLine(DoctorInfo);
+
+                    DoctorInfo = tempData.FindAll(x => x.Ddepartment == Ddepartment);
 
 
 
@@ -114,63 +125,17 @@ namespace WebUITamhmor.Controllers
                         Debug.WriteLine(DoctorResponse);
                         Debug.WriteLine("====================");
 
-                        //Deserializing the response recieved from web api and storing into the Employee list  
-                        DoctorInfo = JsonConvert.DeserializeObject<List<DoctorModel>>(DoctorResponse);
-                        // check Dsex map value
-                        Debug.WriteLine(DoctorInfo);
+                    //Deserializing the response recieved from web api and storing into the Employee list  
+                    DoctorInfo = JsonConvert.DeserializeObject<List<DoctorModel>>(DoctorResponse);
+                    // check Dsex map value
+                    Debug.WriteLine(DoctorInfo);
 
-
-
-                    }
+                }
 
                     return View(DoctorInfo);
                 }
             }
 
-        //[HttpGet("{id:int}")]
-        //public async Task<ActionResult>  ListDoctor(int Did)
-        //{
-        //    DoctorModel DoctorInfo = new DoctorModel();
-        //    using (var client = new HttpClient())
-        //    {
-        //        //client.BaseAddress = new Uri("/api/v1/Doctor/GetDoctor");
-        //        //Passing service base url  
-        //        client.BaseAddress = new Uri(Baseurl);
-
-        //        client.DefaultRequestHeaders.Clear();
-        //        //Define request data format  
-        //        client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-
-        //        //Sending request to find web api REST service resource GetAllEmployees using HttpClient  
-        //        HttpResponseMessage Res = await client.GetAsync("/api/v1/Doctor/DepartmentDoctor");
-
-        //        var response = client.GetAsync($"doctor/{ Did}");
-        //        response.Wait();
-
-        //        var result = response.Result;
-
-        //        if (result.IsSuccessStatusCode)
-        //        {
-        //            var readTask = result.Content.ReadAsAsync<DoctorModel>();
-        //            readTask.Wait();
-
-        //            DoctorInfo = readTask.Result;
-        //        }
-        //    }
-        //    return View(DoctorInfo);
-                //try
-            //{
-                //var result = await employeeRepository.GetEmployee(id);
-
-                //if (result == null) return NotFound();
-
-                //return result;
-            //}
-            //catch (Exception)
-            //{
-               // return StatusCode(StatusCodes.Status500InternalServerError,
-                    //"Error retrieving data from the database");
-            //}
-        //}
+        
     }
 }

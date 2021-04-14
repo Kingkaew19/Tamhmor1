@@ -2,8 +2,7 @@
     ViewData["Title"] = "Login";
 }
 
-<!DOCTYPE html>
-<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,11 +12,13 @@
     <script src="https://apis.google.com/js/platform.js" async defer></script>
 </head>
 <body>
-    <div class="container">
-        <h2 class="position-absolute ">Login</h2>
-        <div class='g-signin2' data-onsuccess="onSignIn"></div>
+    <div class="container  table-bordered" style="margin:20px; padding:50px;">
+        <div style="text-align:center">
+            <h2>Login</h2>
+            <div class='g-signin2' data-onsuccess="onSignIn" style="align-content:center;"></div>
+        </div>
     </div>
-    
+</body>    
 
     <script>
         function onSignIn(googleUser) {
@@ -53,9 +54,7 @@
                     MessageBox.Show("Invalid username or password");
                 }
             };
-
-
-        </script>
+    </script>
 
     @*<script>
             function onSignIn(googleUser) {
@@ -70,5 +69,5 @@
 
             };
         </script>*@
-</body>
-</html>
+
+

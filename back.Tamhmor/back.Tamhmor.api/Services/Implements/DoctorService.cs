@@ -11,6 +11,7 @@ namespace back.Tamhmor.api.Services.Implements
     public class DoctorService : IDoctorService
     {
         private readonly IBaseRepository baseRepository;
+        string searchText;
         public DoctorService(IBaseRepository baseRepository)
         {
             this.baseRepository = baseRepository;
@@ -25,6 +26,12 @@ namespace back.Tamhmor.api.Services.Implements
         public List<DoctorModel> departmentdoctor()
         {
             var result = baseRepository.QueryStoredProcedure<DoctorModel>("Sp_departmentDoctor", null);
+
+            return result.ToList();
+        }
+        public List<DoctorModel> searchdoctor()
+        {
+            var result = baseRepository.QueryStoredProcedure<DoctorModel>("Sp_searchDoctor", null);
 
             return result.ToList();
         }

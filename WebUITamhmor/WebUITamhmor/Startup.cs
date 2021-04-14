@@ -56,7 +56,7 @@ namespace WebUITamhmor
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=DetailDoctor}/{action=ListDoctor}");
+                    template: "{controller=DetailDoctor}/{action=DepartmentDoctor}");
             });
         }
     }
