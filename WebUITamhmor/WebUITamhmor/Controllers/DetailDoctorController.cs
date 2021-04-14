@@ -127,50 +127,6 @@ namespace WebUITamhmor.Controllers
                 }
             }
 
-        //[HttpGet("{id:int}")]
-        //public async Task<ActionResult>  ListDoctor(int Did)
-        //{
-        //    DoctorModel DoctorInfo = new DoctorModel();
-        //    using (var client = new HttpClient())
-        //    {
-        //        //client.BaseAddress = new Uri("/api/v1/Doctor/GetDoctor");
-        //        //Passing service base url  
-        //        client.BaseAddress = new Uri(Baseurl);
-
-        //        client.DefaultRequestHeaders.Clear();
-        //        //Define request data format  
-        //        client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-
-        //        //Sending request to find web api REST service resource GetAllEmployees using HttpClient  
-        //        HttpResponseMessage Res = await client.GetAsync("/api/v1/Doctor/DepartmentDoctor");
-
-        //        var response = client.GetAsync($"doctor/{ Did}");
-        //        response.Wait();
-
-        //        var result = response.Result;
-
-        //        if (result.IsSuccessStatusCode)
-        //        {
-        //            var readTask = result.Content.ReadAsAsync<DoctorModel>();
-        //            readTask.Wait();
-
-        //            DoctorInfo = readTask.Result;
-        //        }
-        //    }
-        //    return View(DoctorInfo);
-                //try
-            //{
-                //var result = await employeeRepository.GetEmployee(id);
-
-                //if (result == null) return NotFound();
-
-                //return result;
-            //}
-            //catch (Exception)
-            //{
-               // return StatusCode(StatusCodes.Status500InternalServerError,
-                    //"Error retrieving data from the database");
-            //}
-        //}
+        
     }
 }

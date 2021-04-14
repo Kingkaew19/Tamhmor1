@@ -65,27 +65,27 @@ namespace back.Tamhmor.api.Controllers
         //    }
         //}
 
-        [HttpGet("GetDoctor")]
-        public IActionResult GetDoctor(int Did)
-        {
-            //var result = doctorService.getdoctor(Did);
-            //return new OkObjectResult(result);
+        //[HttpGet("GetDoctor")]
+        //public IActionResult GetDoctor(int Did)
+        //{
+        //    //var result = doctorService.getdoctor(Did);
+        //    //return new OkObjectResult(result);
 
-            try
-            {
-                var result = doctorService.getdoctor(Did);
-                if (result == null)
-                {
-                    return StatusCode(StatusCodes.Status204NoContent, result);
-                }
-                else
-                {
-                    return StatusCode(StatusCodes.Status200OK, result);
-                }
+        //    try
+        //    {
+        //        var result = doctorService.getdoctor(Did);
+        //        if (result == null)
+        //        {
+        //            return StatusCode(StatusCodes.Status204NoContent, result);
+        //        }
+        //        else
+        //        {
+        //            return StatusCode(StatusCodes.Status200OK, result);
+        //        }
 
-            }
+        //    }
             
-        }
+        //}
 
         //[HttpGet]
         //public async Task<ActionResult<IEnumerable<IDoctorService>>> GetDoctors()

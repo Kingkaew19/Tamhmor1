@@ -12662,23 +12662,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\admin\\.nuget\\packages\\": {},
+    "C:\\Users\\User\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\admin\\source\\repos\\back.Tamhmor\\back.Tamhmor.api\\back.Tamhmor.api.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\Projct tamhmor\\Tamhmor1\\back.Tamhmor\\back.Tamhmor.api\\back.Tamhmor.api.csproj",
       "projectName": "back.Tamhmor.api",
-      "projectPath": "C:\\Users\\admin\\source\\repos\\back.Tamhmor\\back.Tamhmor.api\\back.Tamhmor.api.csproj",
-      "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\admin\\source\\repos\\back.Tamhmor\\back.Tamhmor.api\\obj\\",
+      "projectPath": "C:\\Users\\User\\Desktop\\Projct tamhmor\\Tamhmor1\\back.Tamhmor\\back.Tamhmor.api\\back.Tamhmor.api.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\User\\Desktop\\Projct tamhmor\\Tamhmor1\\back.Tamhmor\\back.Tamhmor.api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -12691,7 +12691,6 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
-          "targetAlias": "netcoreapp2.1",
           "projectReferences": {}
         }
       },
@@ -12703,7 +12702,6 @@
     },
     "frameworks": {
       "netcoreapp2.1": {
-        "targetAlias": "netcoreapp2.1",
         "dependencies": {
           "Amazon.Lambda.AspNetCoreServer": {
             "target": "Package",
@@ -12749,7 +12747,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.407\\RuntimeIdentifierGraph.json"
       }
     }
   }

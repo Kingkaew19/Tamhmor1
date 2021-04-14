@@ -26,6 +26,7 @@
         "dependencies": {
           "Amazon.Lambda.AspNetCoreServer": "5.1.4",
           "Dapper": "2.0.35",
+          "Google.AdWords": "24.14.0",
           "Microsoft.AspNetCore.App": "2.1.1",
           "Microsoft.AspNetCore.Razor.Design": "2.1.2",
           "Microsoft.NETCore.App": "2.1.0",
@@ -40,7 +41,7 @@
       },
       "Amazon.Lambda.APIGatewayEvents/2.1.0": {
         "dependencies": {
-          "Newtonsoft.Json": "11.0.2"
+          "Newtonsoft.Json": "12.0.1"
         },
         "runtime": {
           "lib/netstandard2.0/Amazon.Lambda.APIGatewayEvents.dll": {
@@ -72,7 +73,7 @@
           "Amazon.Lambda.Serialization.Json": "1.7.0",
           "Microsoft.AspNetCore": "2.1.1",
           "Microsoft.AspNetCore.Hosting": "2.1.1",
-          "Newtonsoft.Json": "11.0.2"
+          "Newtonsoft.Json": "12.0.1"
         },
         "runtime": {
           "lib/netstandard2.0/Amazon.Lambda.AspNetCoreServer.dll": {
@@ -115,7 +116,7 @@
       "Amazon.Lambda.Serialization.Json/1.7.0": {
         "dependencies": {
           "Amazon.Lambda.Core": "1.1.0",
-          "Newtonsoft.Json": "11.0.2"
+          "Newtonsoft.Json": "12.0.1"
         },
         "runtime": {
           "lib/netstandard2.0/Amazon.Lambda.Serialization.Json.dll": {
@@ -139,6 +140,89 @@
         },
         "compile": {
           "lib/netstandard2.0/Dapper.dll": {}
+        }
+      },
+      "Google.Ads.Common/9.5.1": {
+        "dependencies": {
+          "Google.Apis.Auth": "1.36.1",
+          "Microsoft.Extensions.Configuration": "2.1.1",
+          "Newtonsoft.Json": "12.0.1",
+          "System.Configuration.ConfigurationManager": "4.5.0",
+          "System.ServiceModel.Http": "4.5.3",
+          "System.ServiceModel.Security": "4.5.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Ads.Common.dll": {
+            "assemblyVersion": "9.5.1.0",
+            "fileVersion": "9.5.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Ads.Common.dll": {}
+        }
+      },
+      "Google.AdWords/24.14.0": {
+        "dependencies": {
+          "Google.Ads.Common": "9.5.1",
+          "System.ServiceModel.Http": "4.5.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.AdWords.dll": {
+            "assemblyVersion": "24.14.0.0",
+            "fileVersion": "24.14.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.AdWords.dll": {}
+        }
+      },
+      "Google.Apis/1.36.1": {
+        "dependencies": {
+          "Google.Apis.Core": "1.36.1",
+          "Newtonsoft.Json": "12.0.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.dll": {
+            "assemblyVersion": "1.36.1.0",
+            "fileVersion": "1.36.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.dll": {}
+        }
+      },
+      "Google.Apis.Auth/1.36.1": {
+        "dependencies": {
+          "Google.Apis": "1.36.1",
+          "Google.Apis.Core": "1.36.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.Auth.PlatformServices.dll": {
+            "assemblyVersion": "1.36.1.0",
+            "fileVersion": "1.36.1.0"
+          },
+          "lib/netstandard2.0/Google.Apis.Auth.dll": {
+            "assemblyVersion": "1.36.1.0",
+            "fileVersion": "1.36.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.Auth.PlatformServices.dll": {},
+          "lib/netstandard2.0/Google.Apis.Auth.dll": {}
+        }
+      },
+      "Google.Apis.Core/1.36.1": {
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.Core.dll": {
+            "assemblyVersion": "1.36.1.0",
+            "fileVersion": "1.36.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.Core.dll": {}
         }
       },
       "Microsoft.AspNetCore.Razor.Design/2.1.2": {},
@@ -170,6 +254,17 @@
         },
         "compile": {
           "ref/netstandard2.0/Microsoft.Win32.Registry.dll": {}
+        }
+      },
+      "Newtonsoft.Json/12.0.1": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.0.1.22727"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
       "runtime.native.System.Data.SqlClient.sni/4.7.0": {
@@ -204,6 +299,21 @@
             "assetType": "native",
             "fileVersion": "4.6.25512.1"
           }
+        }
+      },
+      "System.Configuration.ConfigurationManager/4.5.0": {
+        "dependencies": {
+          "System.Security.Cryptography.ProtectedData": "4.5.0",
+          "System.Security.Permissions": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Configuration.ConfigurationManager.dll": {
+            "assemblyVersion": "4.0.1.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        },
+        "compile": {
+          "ref/netstandard2.0/System.Configuration.ConfigurationManager.dll": {}
         }
       },
       "System.Data.SqlClient/4.8.2": {
@@ -249,6 +359,28 @@
           "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.dll": {}
         }
       },
+      "System.Private.ServiceModel/4.5.3": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "3.1.0",
+          "System.Reflection.DispatchProxy": "4.5.0",
+          "System.Security.Principal.Windows": "4.7.0"
+        },
+        "runtimeTargets": {
+          "runtimes/unix/lib/netstandard2.0/System.Private.ServiceModel.dll": {
+            "rid": "unix",
+            "assetType": "runtime",
+            "assemblyVersion": "4.5.0.3",
+            "fileVersion": "4.6.26720.1"
+          },
+          "runtimes/win/lib/netstandard2.0/System.Private.ServiceModel.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "4.5.0.3",
+            "fileVersion": "4.6.26720.1"
+          }
+        }
+      },
+      "System.Reflection.DispatchProxy/4.5.0": {},
       "System.Reflection.Emit.Lightweight/4.7.0": {},
       "System.Runtime.CompilerServices.Unsafe/4.7.0": {
         "runtime": {
@@ -284,6 +416,22 @@
           "ref/netstandard2.0/System.Security.AccessControl.dll": {}
         }
       },
+      "System.Security.Cryptography.ProtectedData/4.5.0": {
+        "runtime": {
+          "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": {
+            "assemblyVersion": "4.0.3.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "4.0.3.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        }
+      },
       "System.Security.Principal.Windows/4.7.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "3.1.0"
@@ -312,6 +460,55 @@
           "ref/netstandard2.0/System.Security.Principal.Windows.dll": {}
         }
       },
+      "System.ServiceModel.Http/4.5.3": {
+        "dependencies": {
+          "System.Private.ServiceModel": "4.5.3",
+          "System.ServiceModel.Primitives": "4.5.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.ServiceModel.Http.dll": {
+            "assemblyVersion": "4.5.0.3",
+            "fileVersion": "4.6.26720.1"
+          }
+        },
+        "compile": {
+          "ref/netstandard2.0/System.ServiceModel.Http.dll": {}
+        }
+      },
+      "System.ServiceModel.Primitives/4.5.3": {
+        "dependencies": {
+          "System.Private.ServiceModel": "4.5.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.ServiceModel.Primitives.dll": {
+            "assemblyVersion": "4.5.0.3",
+            "fileVersion": "4.6.26720.1"
+          },
+          "lib/netstandard2.0/System.ServiceModel.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.6.26720.1"
+          }
+        },
+        "compile": {
+          "ref/netstandard2.0/System.ServiceModel.Primitives.dll": {},
+          "ref/netstandard2.0/System.ServiceModel.dll": {}
+        }
+      },
+      "System.ServiceModel.Security/4.5.3": {
+        "dependencies": {
+          "System.Private.ServiceModel": "4.5.3",
+          "System.ServiceModel.Primitives": "4.5.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.ServiceModel.Security.dll": {
+            "assemblyVersion": "4.5.0.3",
+            "fileVersion": "4.6.26720.1"
+          }
+        },
+        "compile": {
+          "ref/netstandard2.0/System.ServiceModel.Security.dll": {}
+        }
+      },
       "System.Text.Encoding.CodePages/4.7.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "3.1.0",
@@ -334,7 +531,7 @@
       },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
         "dependencies": {
-          "Newtonsoft.Json": "11.0.2",
+          "Newtonsoft.Json": "12.0.1",
           "Newtonsoft.Json.Bson": "1.0.1"
         },
         "compile": {
@@ -614,7 +811,7 @@
       "Microsoft.AspNetCore.Authentication.OAuth/2.1.1": {
         "dependencies": {
           "Microsoft.AspNetCore.Authentication": "2.1.1",
-          "Newtonsoft.Json": "11.0.2"
+          "Newtonsoft.Json": "12.0.1"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.AspNetCore.Authentication.OAuth.dll": {}
@@ -880,7 +1077,7 @@
           "Microsoft.AspNetCore.Http.Connections.Common": "1.0.1",
           "Microsoft.AspNetCore.Routing": "2.1.1",
           "Microsoft.AspNetCore.WebSockets": "2.1.1",
-          "Newtonsoft.Json": "11.0.2"
+          "Newtonsoft.Json": "12.0.1"
         },
         "compile": {
           "lib/netcoreapp2.1/Microsoft.AspNetCore.Http.Connections.dll": {}
@@ -890,7 +1087,7 @@
       "Microsoft.AspNetCore.Http.Connections.Common/1.0.1": {
         "dependencies": {
           "Microsoft.AspNetCore.Connections.Abstractions": "2.1.1",
-          "Newtonsoft.Json": "11.0.2",
+          "Newtonsoft.Json": "12.0.1",
           "System.Buffers": "4.5.0"
         },
         "compile": {
@@ -983,7 +1180,7 @@
       "Microsoft.AspNetCore.JsonPatch/2.1.1": {
         "dependencies": {
           "Microsoft.CSharp": "4.5.0",
-          "Newtonsoft.Json": "11.0.2"
+          "Newtonsoft.Json": "12.0.1"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.AspNetCore.JsonPatch.dll": {}
@@ -1214,7 +1411,7 @@
         "dependencies": {
           "Microsoft.AspNetCore.Hosting.Abstractions": "2.1.1",
           "Microsoft.Extensions.Logging.Console": "2.1.1",
-          "Newtonsoft.Json": "11.0.2"
+          "Newtonsoft.Json": "12.0.1"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.AspNetCore.NodeServices.dll": {}
@@ -1446,7 +1643,7 @@
         "dependencies": {
           "Microsoft.AspNetCore.Connections.Abstractions": "2.1.1",
           "Microsoft.Extensions.Options": "2.1.1",
-          "Newtonsoft.Json": "11.0.2",
+          "Newtonsoft.Json": "12.0.1",
           "System.Buffers": "4.5.0"
         },
         "compile": {
@@ -1472,7 +1669,7 @@
       "Microsoft.AspNetCore.SignalR.Protocols.Json/1.0.1": {
         "dependencies": {
           "Microsoft.AspNetCore.SignalR.Common": "1.0.1",
-          "Newtonsoft.Json": "11.0.2"
+          "Newtonsoft.Json": "12.0.1"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.AspNetCore.SignalR.Protocols.Json.dll": {}
@@ -1796,7 +1993,7 @@
         "dependencies": {
           "Microsoft.Extensions.Configuration": "2.1.1",
           "Microsoft.Extensions.Configuration.FileExtensions": "2.1.1",
-          "Newtonsoft.Json": "11.0.2"
+          "Newtonsoft.Json": "12.0.1"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.Json.dll": {}
@@ -1851,7 +2048,7 @@
       "Microsoft.Extensions.DependencyModel/2.1.0": {
         "dependencies": {
           "Microsoft.DotNet.PlatformAbstractions": "2.1.0",
-          "Newtonsoft.Json": "11.0.2",
+          "Newtonsoft.Json": "12.0.1",
           "System.Diagnostics.Debug": "4.3.0",
           "System.Dynamic.Runtime": "4.3.0",
           "System.Linq": "4.3.0"
@@ -2041,7 +2238,7 @@
       "Microsoft.Extensions.Logging.EventSource/2.1.1": {
         "dependencies": {
           "Microsoft.Extensions.Logging": "2.1.1",
-          "Newtonsoft.Json": "11.0.2"
+          "Newtonsoft.Json": "12.0.1"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.Extensions.Logging.EventSource.dll": {}
@@ -2137,7 +2334,7 @@
         "dependencies": {
           "Microsoft.IdentityModel.Protocols": "5.2.0",
           "NETStandard.Library": "2.0.3",
-          "Newtonsoft.Json": "11.0.2",
+          "Newtonsoft.Json": "12.0.1",
           "System.Dynamic.Runtime": "4.3.0",
           "System.IdentityModel.Tokens.Jwt": "5.2.0"
         },
@@ -2163,7 +2360,7 @@
         "dependencies": {
           "Microsoft.IdentityModel.Logging": "5.2.0",
           "NETStandard.Library": "2.0.3",
-          "Newtonsoft.Json": "11.0.2",
+          "Newtonsoft.Json": "12.0.1",
           "System.Collections": "4.3.0",
           "System.Diagnostics.Tools": "4.3.0",
           "System.Runtime": "4.3.0",
@@ -2390,16 +2587,10 @@
         },
         "compileOnly": true
       },
-      "Newtonsoft.Json/11.0.2": {
-        "compile": {
-          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
-        },
-        "compileOnly": true
-      },
       "Newtonsoft.Json.Bson/1.0.1": {
         "dependencies": {
           "NETStandard.Library": "2.0.3",
-          "Newtonsoft.Json": "11.0.2"
+          "Newtonsoft.Json": "12.0.1"
         },
         "compile": {
           "lib/netstandard1.3/Newtonsoft.Json.Bson.dll": {}
@@ -2675,7 +2866,7 @@
         "dependencies": {
           "Microsoft.IdentityModel.Tokens": "5.2.0",
           "NETStandard.Library": "2.0.3",
-          "Newtonsoft.Json": "11.0.2"
+          "Newtonsoft.Json": "12.0.1"
         },
         "compile": {
           "lib/netstandard1.4/System.IdentityModel.Tokens.Jwt.dll": {}
@@ -3423,6 +3614,41 @@
       "path": "dapper/2.0.35",
       "hashPath": "dapper.2.0.35.nupkg.sha512"
     },
+    "Google.Ads.Common/9.5.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-bpW8/7WJ3GUQgqOH8vF+jPBLTkZzLvSnwMEvmRRGtPBQVQEhPIpLdJiZQaNd8YPAehaJXgB0SQ5NN2fcMzlZYg==",
+      "path": "google.ads.common/9.5.1",
+      "hashPath": "google.ads.common.9.5.1.nupkg.sha512"
+    },
+    "Google.AdWords/24.14.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-brUp5hsFfbf7qCFjii1sLGMtYR7DJ9NtDz3EC2Mh7sguctOs1Vmg0UPxnszECJfbHhpR92kNlEDtx1ehvWYyLg==",
+      "path": "google.adwords/24.14.0",
+      "hashPath": "google.adwords.24.14.0.nupkg.sha512"
+    },
+    "Google.Apis/1.36.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-t4wJDCilDNqvB1AlLf27+g9vyMib5aoowaoBOVpVjnQp+C2EDfdv07Eo9bSyqq1yzXhpGWiQUOzHfBWbTPQ6vw==",
+      "path": "google.apis/1.36.1",
+      "hashPath": "google.apis.1.36.1.nupkg.sha512"
+    },
+    "Google.Apis.Auth/1.36.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-oZU/4PdyFAVf1eVfOy4U+K3M0TIHl5HiOlj3bCIwgaXE2vZv/DbaPoxViVpDqbP+hfQuk8nb8hg08Wllar6oSw==",
+      "path": "google.apis.auth/1.36.1",
+      "hashPath": "google.apis.auth.1.36.1.nupkg.sha512"
+    },
+    "Google.Apis.Core/1.36.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-d1B/4A6W9d6uCZRUpcNGBTohLYs9cVgXASgCfszohE/4wByUhq9rf4/B+WfisYFdC6IUKR/5lYUXWtX/qONfQA==",
+      "path": "google.apis.core/1.36.1",
+      "hashPath": "google.apis.core.1.36.1.nupkg.sha512"
+    },
     "Microsoft.AspNetCore.Razor.Design/2.1.2": {
       "type": "package",
       "serviceable": true,
@@ -3443,6 +3669,13 @@
       "sha512": "sha512-KSrRMb5vNi0CWSGG1++id2ZOs/1QhRqROt+qgbEAdQuGjGrFcl4AOl4/exGPUYz2wUnU42nvJqon1T3U0kPXLA==",
       "path": "microsoft.win32.registry/4.7.0",
       "hashPath": "microsoft.win32.registry.4.7.0.nupkg.sha512"
+    },
+    "Newtonsoft.Json/12.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pBR3wCgYWZGiaZDYP+HHYnalVnPJlpP1q55qvVb+adrDHmFMDc1NAKio61xTwftK3Pw5h7TZJPJEEVMd6ty8rg==",
+      "path": "newtonsoft.json/12.0.1",
+      "hashPath": "newtonsoft.json.12.0.1.nupkg.sha512"
     },
     "runtime.native.System.Data.SqlClient.sni/4.7.0": {
       "type": "package",
@@ -3472,6 +3705,13 @@
       "path": "runtime.win-x86.runtime.native.system.data.sqlclient.sni/4.4.0",
       "hashPath": "runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512"
     },
+    "System.Configuration.ConfigurationManager/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UIFvaFfuKhLr9u5tWMxmVoDPkFeD+Qv8gUuap4aZgVGYSYMdERck4OhLN/2gulAc0nYTEigWXSJNNWshrmxnng==",
+      "path": "system.configuration.configurationmanager/4.5.0",
+      "hashPath": "system.configuration.configurationmanager.4.5.0.nupkg.sha512"
+    },
     "System.Data.SqlClient/4.8.2": {
       "type": "package",
       "serviceable": true,
@@ -3485,6 +3725,20 @@
       "sha512": "sha512-oJjw3uFuVDJiJNbCD8HB4a2p3NYLdt1fiT5OGsPLw+WTOuG0KpP4OXelMmmVKpClueMsit6xOlzy4wNKQFiBLg==",
       "path": "system.diagnostics.diagnosticsource/4.7.0",
       "hashPath": "system.diagnostics.diagnosticsource.4.7.0.nupkg.sha512"
+    },
+    "System.Private.ServiceModel/4.5.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ancrQgJagx+yC4SZbuE+eShiEAUIF0E1d21TRSoy1C/rTwafAVcBr/fKibkq5TQzyy9uNil2tx2/iaUxsy0S9g==",
+      "path": "system.private.servicemodel/4.5.3",
+      "hashPath": "system.private.servicemodel.4.5.3.nupkg.sha512"
+    },
+    "System.Reflection.DispatchProxy/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+UW1hq11TNSeb+16rIk8hRQ02o339NFyzMc4ma/FqmxBzM30l1c2IherBB4ld1MNcenS48fz8tbt50OW4rVULA==",
+      "path": "system.reflection.dispatchproxy/4.5.0",
+      "hashPath": "system.reflection.dispatchproxy.4.5.0.nupkg.sha512"
     },
     "System.Reflection.Emit.Lightweight/4.7.0": {
       "type": "package",
@@ -3507,12 +3761,40 @@
       "path": "system.security.accesscontrol/4.7.0",
       "hashPath": "system.security.accesscontrol.4.7.0.nupkg.sha512"
     },
+    "System.Security.Cryptography.ProtectedData/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wLBKzFnDCxP12VL9ANydSYhk59fC4cvOr9ypYQLPnAj48NQIhqnjdD2yhP8yEKyBJEjERWS9DisKL7rX5eU25Q==",
+      "path": "system.security.cryptography.protecteddata/4.5.0",
+      "hashPath": "system.security.cryptography.protecteddata.4.5.0.nupkg.sha512"
+    },
     "System.Security.Principal.Windows/4.7.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-ojD0PX0XhneCsUbAZVKdb7h/70vyYMDYs85lwEI+LngEONe/17A0cFaRFqZU+sOEidcVswYWikYOQ9PPfjlbtQ==",
       "path": "system.security.principal.windows/4.7.0",
       "hashPath": "system.security.principal.windows.4.7.0.nupkg.sha512"
+    },
+    "System.ServiceModel.Http/4.5.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zxR4z6G/FFK/uAUbo7+3IJOqm0w4/lyfHSQDf+hhUHRTc7XSeReGS5iKQq95gyl1ighHEuayqOiB7iacrB6ZUg==",
+      "path": "system.servicemodel.http/4.5.3",
+      "hashPath": "system.servicemodel.http.4.5.3.nupkg.sha512"
+    },
+    "System.ServiceModel.Primitives/4.5.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Wc9Hgg4Cmqi416zvEgq2sW1YYCGuhwWzspDclJWlFZqY6EGhFUPZU+kVpl5z9kAgrSOQP7/Uiik+PtSQtmq+5A==",
+      "path": "system.servicemodel.primitives/4.5.3",
+      "hashPath": "system.servicemodel.primitives.4.5.3.nupkg.sha512"
+    },
+    "System.ServiceModel.Security/4.5.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-e0c5f536zJ2qEp8sDbI88Tm+NLkx9eqGiXQbQx5fQEtCfQ/dqPOwluu/3aAj/9Bc5XdBAaQcElmr1kyjr2j3EA==",
+      "path": "system.servicemodel.security/4.5.3",
+      "hashPath": "system.servicemodel.security.4.5.3.nupkg.sha512"
     },
     "System.Text.Encoding.CodePages/4.7.0": {
       "type": "package",
@@ -4661,13 +4943,6 @@
       "sha512": "sha512-st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
       "path": "netstandard.library/2.0.3",
       "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
-    },
-    "Newtonsoft.Json/11.0.2": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-IvJe1pj7JHEsP8B8J8DwlMEx8UInrs/x+9oVY+oCD13jpLu4JbJU2WCIsMRn5C4yW9+DgkaO8uiVE5VHKjpmdQ==",
-      "path": "newtonsoft.json/11.0.2",
-      "hashPath": "newtonsoft.json.11.0.2.nupkg.sha512"
     },
     "Newtonsoft.Json.Bson/1.0.1": {
       "type": "package",

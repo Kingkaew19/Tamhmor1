@@ -15,3 +15,21 @@ C:\Users\admin\source\repos\back.Tamhmor\back.Tamhmor.api\obj\Debug\netcoreapp2.
 C:\Users\admin\source\repos\back.Tamhmor\back.Tamhmor.api\obj\Debug\netcoreapp2.1\back.Tamhmor.api.dll
 C:\Users\admin\source\repos\back.Tamhmor\back.Tamhmor.api\obj\Debug\netcoreapp2.1\back.Tamhmor.api.pdb
 C:\Users\admin\source\repos\back.Tamhmor\back.Tamhmor.api\obj\Debug\netcoreapp2.1\back.Tamhmor.api.genruntimeconfig.cache
+C:\Users\User\Desktop\Projct tamhmor\Tamhmor1\back.Tamhmor\back.Tamhmor.api\obj\Debug\netcoreapp2.1\back.Tamhmor.api.csprojAssemblyReference.cache
+C:\Users\User\Desktop\Projct tamhmor\Tamhmor1\back.Tamhmor\back.Tamhmor.api\obj\Debug\netcoreapp2.1\back.Tamhmor.api.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\Projct tamhmor\Tamhmor1\back.Tamhmor\back.Tamhmor.api\obj\Debug\netcoreapp2.1\back.Tamhmor.api.AssemblyInfo.cs
+C:\Users\User\Desktop\Projct tamhmor\Tamhmor1\back.Tamhmor\back.Tamhmor.api\obj\Debug\netcoreapp2.1\back.Tamhmor.api.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Projct tamhmor\Tamhmor1\back.Tamhmor\back.Tamhmor.api\obj\Debug\netcoreapp2.1\back.Tamhmor.api.RazorAssemblyInfo.cache
+C:\Users\User\Desktop\Projct tamhmor\Tamhmor1\back.Tamhmor\back.Tamhmor.api\obj\Debug\netcoreapp2.1\back.Tamhmor.api.RazorAssemblyInfo.cs
+C:\Users\User\Desktop\Projct tamhmor\Tamhmor1\back.Tamhmor\back.Tamhmor.api\obj\Debug\netcoreapp2.1\back.Tamhmor.api.dll
+C:\Users\User\Desktop\Projct tamhmor\Tamhmor1\back.Tamhmor\back.Tamhmor.api\obj\Debug\netcoreapp2.1\back.Tamhmor.api.pdb
+C:\Users\User\Desktop\Projct tamhmor\Tamhmor1\back.Tamhmor\back.Tamhmor.api\bin\Debug\netcoreapp2.1\appsettings.Development.json
+C:\Users\User\Desktop\Projct tamhmor\Tamhmor1\back.Tamhmor\back.Tamhmor.api\bin\Debug\netcoreapp2.1\appsettings.json
+C:\Users\User\Desktop\Projct tamhmor\Tamhmor1\back.Tamhmor\back.Tamhmor.api\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
+C:\Users\User\Desktop\Projct tamhmor\Tamhmor1\back.Tamhmor\back.Tamhmor.api\bin\Debug\netcoreapp2.1\back.Tamhmor.api.deps.json
+C:\Users\User\Desktop\Projct tamhmor\Tamhmor1\back.Tamhmor\back.Tamhmor.api\bin\Debug\netcoreapp2.1\back.Tamhmor.api.runtimeconfig.json
+C:\Users\User\Desktop\Projct tamhmor\Tamhmor1\back.Tamhmor\back.Tamhmor.api\bin\Debug\netcoreapp2.1\back.Tamhmor.api.runtimeconfig.dev.json
+C:\Users\User\Desktop\Projct tamhmor\Tamhmor1\back.Tamhmor\back.Tamhmor.api\bin\Debug\netcoreapp2.1\back.Tamhmor.api.dll
+C:\Users\User\Desktop\Projct tamhmor\Tamhmor1\back.Tamhmor\back.Tamhmor.api\bin\Debug\netcoreapp2.1\back.Tamhmor.api.pdb
+C:\Users\User\Desktop\Projct tamhmor\Tamhmor1\back.Tamhmor\back.Tamhmor.api\obj\Debug\netcoreapp2.1\back.Tamhmor.api.RazorTargetAssemblyInfo.cache
+C:\Users\User\Desktop\Projct tamhmor\Tamhmor1\back.Tamhmor\back.Tamhmor.api\obj\Debug\netcoreapp2.1\back.Tamhmor.api.genruntimeconfig.cache
