@@ -1,4 +1,4 @@
-﻿@model WebUITamhmor.Models.DoctorModel
+﻿@model IEnumerable<WebUITamhmor.Models.DoctorModel>
 @*@model Web.Fiction.Models.Fiction*@
 @{
     ViewData["Title"] = "DetailDoctor";
@@ -52,35 +52,37 @@
             <li>ประวัติเเพทย์</li>
         </ul>*@
 
-    <div class="container">
+    <div class="container mypanel">
 
-        @*@foreach (var item in Model)
-            {*@
-        <div class="col" style="margin-right: 300px; font-family: 'Courier New', Courier, monospace;">
-            <p class="row" style="font-size: 40px;">
-                @*@Html.DisplayNameFor(model => model.FId)*@
-                @Html.DisplayFor(model => Model.Dfname)
-                @Html.DisplayFor(model => Model.Dlname)
-            </p>
+        @foreach (var item in Model)
+        {
+            <div class="col" style="margin-right: 300px; font-family: 'Courier New', Courier, monospace;">
+                <p class="row" style="font-size: 40px;">
+                    @*@Html.DisplayNameFor(model => model.FId)*@
+                    @Html.DisplayFor(model => item.Dfname)
+                    @Html.DisplayFor(model => item.Dlname)
+                </p>
 
-            <p class="row" style="font-size: 22px;">แผนก : @Html.DisplayFor(model => Model.Ddepartment)</p>
-            <p class="row" style="font-size: 22px;">อายุ : @Html.DisplayFor(model => Model.Dage)</p>
-            <p class="row" style="font-size: 22px;">ประวัติการศึกษา : มหาวิทยาลัยจุฬาลงหรณ์(เเพทยศาสตร์) ปริญญาตรี</p>
-            <p class="row" style="font-size: 22px;">เเพทย์ประจำโรงพยาบาล : @Html.DisplayFor(model => Model.Dhospital)</p>
-            @*<p class="row" style="font-size: 22px;">จำนวนการรักษา : 200 คน</p>*@
-            <p class="row" style="font-size: 22px;">ความชำนาญเฉพาะทาง : @Html.DisplayFor(model => Model.Dexpertise)</p>
-            <p class="row" style="font-size: 22px;">ค่าปรึกษา : @Html.DisplayFor(model => Model.Dprice)</p>
-        </div>
+                <p class="row" style="font-size: 22px;">แผนก : @Html.DisplayFor(model => item.Ddepartment)</p>
+                <p class="row" style="font-size: 22px;">อายุ : @Html.DisplayFor(model => item.Dage)</p>
+                <p class="row" style="font-size: 22px;">เเพทย์ประจำโรงพยาบาล : @Html.DisplayFor(model => item.Dhospital)</p>
+                <p class="row" style="font-size: 22px;">ความชำนาญเฉพาะทาง : @Html.DisplayFor(model => item.Dexpertise)</p>
+                <p class="row" style="font-size: 22px;">ค่าปรึกษา : @Html.DisplayFor(model => item.Dprice)</p>
+            </div>
 
 
-        <div style="text-align: right;">
-            <button type="button" class="btn btn-info" style="width: 100px; color: white; font-size: 16px;">เเชท</button>
-        </div>
+            <div style="text-align: right;">
+                <button type="button" class="btn btn-info" style="width: 100px; color: white; font-size: 16px;">เเชท</button>
+            </div>
 
-        @*}*@
+        }
     </div>
 
+   
+
 </body>
+
+
 
 
 

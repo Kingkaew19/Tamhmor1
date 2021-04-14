@@ -13,6 +13,7 @@ namespace back.Tamhmor.api.Controllers
     public class DoctorController : ControllerBase
     {
         private readonly IDoctorService doctorService;
+        
         public DoctorController(IDoctorService doctorService)
         {
             this.doctorService = doctorService;
@@ -33,17 +34,24 @@ namespace back.Tamhmor.api.Controllers
         //    }
         //}
 
-        //[HttpGet("GetDoctor")]
-        //public IActionResult GetDoctor(int Did)
-        //{
-        //    var result = doctorService.getdoctor(Did);
-        //    return new OkObjectResult(result);
-        //}
+        [HttpGet("GetDoctor")]
+        public IActionResult GetDoctor(int Did)
+        {
+            var result = doctorService.getdoctor(Did);
+            return new OkObjectResult(result);
+        }
 
         [HttpGet("DepartmentDoctor")]
         public IActionResult DepartmentDoctor()
         {
             var result = doctorService.departmentdoctor();
+            return new OkObjectResult(result);
+        }
+
+        [HttpGet("SearchDoctor")]
+        public IActionResult SearchDoctor()
+        {
+            var result = doctorService.searchdoctor();
             return new OkObjectResult(result);
         }
 
@@ -65,27 +73,35 @@ namespace back.Tamhmor.api.Controllers
         //    }
         //}
 
-        [HttpGet("GetDoctor")]
-        public IActionResult GetDoctor(int Did)
-        {
-            //var result = doctorService.getdoctor(Did);
-            //return new OkObjectResult(result);
+        //[HttpGet("GetDoctor")]
+        //public IActionResult GetDoctor(int Did)
+        //{
+        //    //var result = doctorService.getdoctor(Did);
+        //    //return new OkObjectResult(result);
 
-            try
-            {
-                var result = doctorService.getdoctor(Did);
-                if (result == null)
-                {
-                    return StatusCode(StatusCodes.Status204NoContent, result);
-                }
-                else
-                {
-                    return StatusCode(StatusCodes.Status200OK, result);
-                }
+        //    try
+        //    {
+        //        var result = doctorService.getdoctor(Did);
+        //        if (result == null)
+        //        {
+        //            return StatusCode(StatusCodes.Status204NoContent, result);
+        //        }
+        //        else
+        //        {
+        //            return StatusCode(StatusCodes.Status200OK, result);
+        //        }
 
-            }
-            
-        }
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        return StatusCode(StatusCodes.Status500InternalServerError, new ResponseHeader()
+        //        {
+        //            Status = "F",
+        //            Message = e.Message,
+        //            Content = e.StackTrace
+        //        });
+        //    }
+        //}
 
         //[HttpGet]
         //public async Task<ActionResult<IEnumerable<IDoctorService>>> GetDoctors()
