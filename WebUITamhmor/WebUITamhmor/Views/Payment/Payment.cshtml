@@ -6,24 +6,27 @@
 
 
 <body>
-    <div class="table-bordered " style="margin:50px; padding:20px;">
-        <div style="text-align: center;" >
-            <h1 >Payment</h1>
-            <button type="button" class="btn" style="margin:20px; ">200 Bath </button>
-            <div id="container"></div>
+    @foreach (var item in Model)
+    {
+        <div class="table-bordered " style="margin:50px; padding:20px;">
+            <div style="text-align: center;">
+                <h1>Payment</h1>
+                <button type="button" class="btn" style="margin:20px; "> @Html.DisplayFor(modelItem => item.Dprice) Bath</button>
+                <div id="container"></div>
+            </div>
         </div>
-    </div>
+    }
 </body>
 
 
 
-    <script async
-            src="https://pay.google.com/gp/p/js/pay.js"
-            onload="onGooglePayLoaded()"></script>
+<script async
+        src="https://pay.google.com/gp/p/js/pay.js"
+        onload="onGooglePayLoaded()"></script>
 
 
 
-    <script>
+<script>
         const baseRequest = {
             apiVersion: 2,
             apiVersionMinor: 0
@@ -95,26 +98,33 @@
             const paymentsClient = getGooglePaymentsClient();
             const button = paymentsClient.createButton({ onClick: onGooglePaymentButtonClicked });
             document.getElementById('container').appendChild(button);
-        }
+    }
+        
         function getGoogleTransactionInfo() {
             return {
+
                 countryCode: 'US',
                 currencyCode: 'USD',
                 totalPriceStatus: 'FINAL',
                 // set to cart total
-                totalPrice: '1.00'
+                totalPrice: '200'
             };
-        }
+    }
+
+    
+
+
         function prefetchGooglePaymentData() {
             const paymentDataRequest = getGooglePaymentDataRequest();
             // transactionInfo must be set but does not affect cache
             paymentDataRequest.transactionInfo = {
                 totalPriceStatus: 'NOT_CURRENTLY_KNOWN',
-                currencyCode: 'USD'
+                currencyCode: 'Bath'
             };
             const paymentsClient = getGooglePaymentsClient();
             paymentsClient.prefetchPaymentData(paymentDataRequest);
-        }
+    }
+
         function onGooglePaymentButtonClicked() {
             const paymentDataRequest = getGooglePaymentDataRequest();
             paymentDataRequest.transactionInfo = getGoogleTransactionInfo();
@@ -128,13 +138,16 @@
                     // show error in developer console for debugging
                     console.error(err);
                 });
-        }
+    }
+
+        
         function processPayment(paymentData) {
             // show returned data in developer console for debugging
             console.log(paymentData);
 
             paymentToken = paymentData.paymentMethodData.tokenizationData.token;
-        }
-    </script>
+    }
+
+</script>
 
 

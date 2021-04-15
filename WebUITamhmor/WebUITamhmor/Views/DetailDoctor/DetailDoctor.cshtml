@@ -1,5 +1,4 @@
 ﻿@model IEnumerable<WebUITamhmor.Models.DoctorModel>
-@*@model Web.Fiction.Models.Fiction*@
 @{
     ViewData["Title"] = "DetailDoctor";
 }
@@ -48,37 +47,43 @@
 </style>
 <body>
 
-    @*<ul>
-            <li>ประวัติเเพทย์</li>
-        </ul>*@
-
-    <div class="container mypanel">
+    <div class="container mypanel" style="margin-top:20px;">
 
         @foreach (var item in Model)
         {
             <div class="col" style="margin-right: 300px; font-family: 'Courier New', Courier, monospace;">
-                <p class="row" style="font-size: 40px;">
-                    @*@Html.DisplayNameFor(model => model.FId)*@
+                <p class="row" style="font-size: 30px;">
+                    
                     @Html.DisplayFor(model => item.Dfname)
                     @Html.DisplayFor(model => item.Dlname)
                 </p>
 
                 <p class="row" style="font-size: 22px;">แผนก : @Html.DisplayFor(model => item.Ddepartment)</p>
+                <p class="row" >
+                    @if (item.Dsex == 0)
+                    {
+                        <div style="font-size: 22px;">
+                            เพศ : ชาย
+                        </div>
+                    }
+                    else
+                    {
+                        <div style="font-size: 22px;">
+                            เพศ : หญิง
+                        </div>
+                    }
+                </p>
                 <p class="row" style="font-size: 22px;">อายุ : @Html.DisplayFor(model => item.Dage)</p>
                 <p class="row" style="font-size: 22px;">เเพทย์ประจำโรงพยาบาล : @Html.DisplayFor(model => item.Dhospital)</p>
                 <p class="row" style="font-size: 22px;">ความชำนาญเฉพาะทาง : @Html.DisplayFor(model => item.Dexpertise)</p>
-                <p class="row" style="font-size: 22px;">ค่าปรึกษา : @Html.DisplayFor(model => item.Dprice)</p>
+                <p class="row" style="font-size: 22px;">ค่าปรึกษา : @Html.DisplayFor(model => item.Dprice) Bath</p>
             </div>
-
 
             <div style="text-align: right;">
-                <button type="button" class="btn btn-info" style="width: 100px; color: white; font-size: 16px;">เเชท</button>
+                <button type="button" class="btn btn-info" style="width: 100px; color: white; font-size: 16px;"> @Html.ActionLink("แชท", "Payment", new { Dprice = item.Dprice }) </button>
             </div>
-
         }
     </div>
-
-   
 
 </body>
 

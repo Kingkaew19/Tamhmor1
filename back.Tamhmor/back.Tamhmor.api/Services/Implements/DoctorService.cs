@@ -29,12 +29,7 @@ namespace back.Tamhmor.api.Services.Implements
 
             return result.ToList();
         }
-        public List<DoctorModel> searchdoctor()
-        {
-            var result = baseRepository.QueryStoredProcedure<DoctorModel>("Sp_searchDoctor", null);
-
-            return result.ToList();
-        }
+        
 
     }
 }

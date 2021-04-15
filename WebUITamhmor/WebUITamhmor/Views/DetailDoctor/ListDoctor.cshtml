@@ -11,9 +11,12 @@
     </div>
 </nav>
 
-<div class="container" style="margin-top: 50px; ">
+<div class="container " style="margin-top: 50px; ">
     @Html.Hidden("doctors", Model.Max(x => x.Did))
-    <input type="text" id="txtsearch" onkeyup="searchDoctor(event)" />
+    <div >
+        <p>Search</p>
+        <input class="input-md" type="text" id="txtsearch" onkeyup="searchDoctor(event) " style="margin-bottom:20px;" />
+    </div>
     @foreach (var item in Model)
     {
         <div id="@item.Did" class="row table-bordered border-0 " style="padding: 20px; margin-bottom: 20px;">

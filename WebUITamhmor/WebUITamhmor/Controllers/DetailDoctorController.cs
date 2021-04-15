@@ -48,10 +48,6 @@ namespace WebUITamhmor.Controllers
                     //var test = tempDataList.Find(x => x.Did == Did);
                     //DoctorInfo.Clear();
                     DoctorInfo.Add(tempDataList.Find(x => x.Did == Did));
-
-
-
-
                 }
 
                 //var detailDoctor = context.Doctors.Where(x => x.Did == Did).ToList();
@@ -93,8 +89,6 @@ namespace WebUITamhmor.Controllers
 
                     DoctorInfo = tempData.FindAll(x => x.Ddepartment == Ddepartment);
 
-
-
                 }
                 
                 return View(DoctorInfo);
@@ -134,8 +128,6 @@ namespace WebUITamhmor.Controllers
 
                     return View(DoctorInfo);
                 }
-            }
-
-        
+        }
     }
 }
