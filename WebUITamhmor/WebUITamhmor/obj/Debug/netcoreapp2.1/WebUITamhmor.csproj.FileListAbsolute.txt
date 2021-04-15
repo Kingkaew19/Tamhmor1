@@ -37,5 +37,6 @@ C:\Users\admin\source\repos\WebUITamhmor\WebUITamhmor\obj\Debug\netcoreapp2.1\We
 C:\Users\admin\source\repos\WebUITamhmor\WebUITamhmor\obj\Debug\netcoreapp2.1\WebUITamhmor.csproj.CopyComplete
 C:\Users\admin\source\repos\WebUITamhmor\WebUITamhmor\obj\Debug\netcoreapp2.1\Razor\Views\Login\Login.cshtml.g.cs
 C:\Users\admin\source\repos\WebUITamhmor\WebUITamhmor\obj\Debug\netcoreapp2.1\Razor\Views\DetailDoctor\DepartmentDoctor.cshtml.g.cs
-C:\Users\admin\source\repos\WebUITamhmor\WebUITamhmor\obj\Debug\netcoreapp2.1\Razor\Views\Chat\Chat.cshtml.g.cs
 C:\Users\admin\source\repos\WebUITamhmor\WebUITamhmor\obj\Debug\netcoreapp2.1\Razor\Views\Payment\Payment.cshtml.g.cs
+C:\Users\admin\source\repos\WebUITamhmor\WebUITamhmor\obj\Debug\netcoreapp2.1\Razor\Views\Chat\Chat.cshtml.g.cs
+C:\Users\admin\source\repos\WebUITamhmor\WebUITamhmor\obj\Debug\netcoreapp2.1\Razor\Views\Chat\Chatroom.cshtml.g.cs

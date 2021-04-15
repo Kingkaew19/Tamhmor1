@@ -48,12 +48,7 @@ namespace back.Tamhmor.api.Controllers
             return new OkObjectResult(result);
         }
 
-        [HttpGet("SearchDoctor")]
-        public IActionResult SearchDoctor()
-        {
-            var result = doctorService.searchdoctor();
-            return new OkObjectResult(result);
-        }
+        
 
         //[HttpGet("{id:int}")]
         //public async Task<ActionResult<DoctorController>> getdoctor(int Did)
