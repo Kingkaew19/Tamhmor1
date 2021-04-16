@@ -98,6 +98,8 @@
             const paymentsClient = getGooglePaymentsClient();
             const button = paymentsClient.createButton({ onClick: onGooglePaymentButtonClicked });
             document.getElementById('container').appendChild(button);
+            //window.location.href = "/Chat/Chat";
+            
     }
         
         function getGoogleTransactionInfo() {

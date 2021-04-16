@@ -15,7 +15,7 @@
     <div class="container  table-bordered" style="margin:20px; padding:50px;">
         <div style="text-align:center">
             <h2 style="margin:20px">Login</h2>
-            <div class="g-signin2" data-onsuccess="onSignIn" style="margin-left:41%;"></div>
+            <div class="g-signin2" data-onsuccess="onSignIn" style="margin-left:45%;"></div>
         </div>
     </div>
     @Html.HiddenFor(model => model.Id, new { id = "id" })
@@ -33,6 +33,7 @@
         console.log('Name: ' + profile.getName());
         console.log('Image URL: ' + profile.getImageUrl());
         console.log('Email: ' + profile.getEmail());*/
+        localStorage.setItem('name', profile.getName());
         $('#id').val(profile.getId());
         $('#name').val(profile.getName());
         $('#image').val(profile.getImageUrl());
