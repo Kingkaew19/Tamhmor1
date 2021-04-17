@@ -102,7 +102,7 @@ using WebUITamhmor.Models;
 ");
             EndContext();
             BeginContext(911, 1830, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "910af72a4fbc47058b98bfb08961d806", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "87b562b7a9024241b85ad78da4d18468", async() => {
                 BeginContext(917, 68, true);
                 WriteLiteral("\r\n\r\n    <div class=\"container mypanel\" style=\"margin-top:20px;\">\r\n\r\n");
                 EndContext();

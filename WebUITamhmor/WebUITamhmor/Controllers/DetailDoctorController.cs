@@ -98,7 +98,7 @@ namespace WebUITamhmor.Controllers
 
         public async Task<ActionResult> DepartmentDoctor()
         {
-            //ScriptManager.RegisterStartupScript(this, GetType(), "checkLogin", "checkLogin()", true);
+            
 
             List<DoctorModel> DoctorInfo = new List<DoctorModel>();
                 using (var client = new HttpClient())
@@ -126,7 +126,7 @@ namespace WebUITamhmor.Controllers
                     // check Dsex map value
                     Debug.WriteLine(DoctorInfo);
 
-
+                    
 
                 }
 
@@ -134,18 +134,7 @@ namespace WebUITamhmor.Controllers
                 }
         }
 
-        public IActionResult Profile()
-        {
-            return View();
-        }
-
-        //public ActionResult DoctorUser()
-        //{
-        //    VeiwModel veiwModel = new VeiwModel();
-        //    veiwModel.DoctorModel = DepartmentDoctor();
-        //    veiwModel.GoogleProfiles = Profile();
-
-        //    return View(veiwModel);
-        //}
+        
+        
     }
 }

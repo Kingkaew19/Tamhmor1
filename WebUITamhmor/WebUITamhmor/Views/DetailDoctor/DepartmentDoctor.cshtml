@@ -16,13 +16,14 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 </head>
 
-<body onload="javascript:checkLogin()">
-    <h3 onload="javascript:checkLogin() ></h3onload=" javascript:checkLogin()>
+<body>
+    @*<h3 onload="javascript:checkLogin() ></h3onload=" javascript:checkLogin()>*@
 
-
+        <div class="g-signin2" data-onsuccess="onSignIn" hidden></div>
+        <h4 id="GG-Name" style="margin-left:800px;"> </h4>
         @foreach (var item in Model)
         {
-            <h2 id="GG-Name" />
+            
             <div class=" container row">
 
                 <div class="col-sm-3">
@@ -40,53 +41,24 @@
 
         }
         
-        <button onclick="signOut()">Sign out</button>
+        <button onclick="signOut();">Sign out</button>
 </body>
 
-<script type="text/javascript">
-    function checkLogin() {
-        const name = localStorage.getItem('name');
-        if (!name) {
+<script>
+    function onSignIn(googleUser) {
+        console.log("onSignIn")
+        if (googleUser) {
+            var profile = googleUser.getBasicProfile();
+            $('#GG-Name').html(profile.getName());
+        } else {
             window.location.href = "/";
         }
-        document.getElementById('GG-Name').innerHTML = name;
-        // logout
-        // ...
-        //localStorage.removeItem('name');
     }
-</script>
-
-
-<script>
     function signOut() {
-        gapi.auth2.getAuthInstance().signOut().then(function () {
-            console.log('user signed out')
-        })
-    }
-</script>
-
-
-@*<script>
-        function signOut() {
-            var auth2 = gapi.auth2.getAuthInstance();
-            auth2.signOut().then(function () {
-                console.log('User signed out.');
-            });
-            if (auth2 == null) {
-                window.location.href = "/";
-            }
-        }
-    </script>*@
-@*<script>
-        function signOut() {
+        console.log("Sign out function...")
         var auth2 = gapi.auth2.getAuthInstance();
         auth2.signOut().then(function () {
-            document.getElementsByClassName("userContent")[0].innerHTML = '';
-            document.getElementsByClassName("userContent")[0].style.display = "none";
-            document.getElementById("gSignIn").style.display = "block";
+            window.location.href = "/";
         });
-
-        auth2.disconnect();
     }
-    </script>*@
-
+</script>
