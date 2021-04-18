@@ -8,11 +8,10 @@
 <body>
     @foreach (var item in Model)
     {
-
         <div class="table-bordered " style="margin:50px; padding:20px;">
             <div style="text-align: center;">
                 <h1>Payment</h1>
-                <button type="button" class="btn" style="margin:20px; "> @Html.DisplayFor(ModelItem => item.Dprice) Bath</button>
+                <button type="button" class="btn" style="margin:20px; "> @Html.DisplayFor(modelItem => item.Dprice) Bath</button>
                 <div id="container"></div>
             </div>
         </div>
@@ -99,7 +98,7 @@
             const paymentsClient = getGooglePaymentsClient();
             const button = paymentsClient.createButton({ onClick: onGooglePaymentButtonClicked });
             document.getElementById('container').appendChild(button);
-            window.location.href = "/Chat/Chatroom";
+            //window.location.href = "/Chat/Chat";
             
     }
         
@@ -110,7 +109,7 @@
                 currencyCode: 'USD',
                 totalPriceStatus: 'FINAL',
                 // set to cart total
-                totalPrice: '10'
+                totalPrice: '200'
             };
     }
 
@@ -122,7 +121,7 @@
             // transactionInfo must be set but does not affect cache
             paymentDataRequest.transactionInfo = {
                 totalPriceStatus: 'NOT_CURRENTLY_KNOWN',
-                currencyCode: 'US'
+                currencyCode: 'Bath'
             };
             const paymentsClient = getGooglePaymentsClient();
             paymentsClient.prefetchPaymentData(paymentDataRequest);

@@ -7,18 +7,15 @@
 
 <nav class="navbar navbar-dark bg-primary">
     <div style="margin:30px">
-        @foreach(var item in Model )
-            {
-            <h1>@Html.DisplayFor(modelItem => item.Ddepartment)</h1>
-        }
-        </div>
+        <h1>รวมแผนก</h1>
+    </div>
 </nav>
 
 <div class="container " style="margin-top: 50px; ">
     @Html.Hidden("doctors", Model.Max(x => x.Did))
-    <div  >
-        <p >Search</p>
-        <input  type="text" id="txtsearch" onkeyup="searchDoctor(event) " style="margin-bottom:20px;" />
+    <div >
+        <p>Search</p>
+        <input class="input-md" type="text" id="txtsearch" onkeyup="searchDoctor(event) " style="margin-bottom:20px;" />
     </div>
     @foreach (var item in Model)
     {
