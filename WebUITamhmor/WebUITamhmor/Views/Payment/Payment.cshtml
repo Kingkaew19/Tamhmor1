@@ -3,26 +3,25 @@
     ViewData["Title"] = "Payment";
 }
 
+<head>
+    <script async
+            src="https://pay.google.com/gp/p/js/pay.js"
+            ></script>
+</head>
 
-
-<body>
+<body onload="addGooglePayButton()">
     @foreach (var item in Model)
     {
+
         <div class="table-bordered " style="margin:50px; padding:20px;">
             <div style="text-align: center;">
                 <h1>Payment</h1>
-                <button type="button" class="btn" style="margin:20px; "> @Html.DisplayFor(modelItem => item.Dprice) Bath</button>
+                <button type="button" class="btn" style="margin:20px; "> @Html.DisplayFor(ModelItem => item.Dprice) Bath</button>
                 <div id="container"></div>
             </div>
         </div>
     }
 </body>
-
-
-
-<script async
-        src="https://pay.google.com/gp/p/js/pay.js"
-        onload="onGooglePayLoaded()"></script>
 
 
 
@@ -98,6 +97,8 @@
             const paymentsClient = getGooglePaymentsClient();
             const button = paymentsClient.createButton({ onClick: onGooglePaymentButtonClicked });
             document.getElementById('container').appendChild(button);
+            
+            
     }
         
         function getGoogleTransactionInfo() {
@@ -107,7 +108,7 @@
                 currencyCode: 'USD',
                 totalPriceStatus: 'FINAL',
                 // set to cart total
-                totalPrice: '200'
+                totalPrice: '10'
             };
     }
 
@@ -119,7 +120,7 @@
             // transactionInfo must be set but does not affect cache
             paymentDataRequest.transactionInfo = {
                 totalPriceStatus: 'NOT_CURRENTLY_KNOWN',
-                currencyCode: 'Bath'
+                currencyCode: 'US'
             };
             const paymentsClient = getGooglePaymentsClient();
             paymentsClient.prefetchPaymentData(paymentDataRequest);
@@ -146,6 +147,9 @@
             console.log(paymentData);
 
             paymentToken = paymentData.paymentMethodData.tokenizationData.token;
+
+            window.location.href = "/Chat/Chatroom";
+            
     }
 
 </script>

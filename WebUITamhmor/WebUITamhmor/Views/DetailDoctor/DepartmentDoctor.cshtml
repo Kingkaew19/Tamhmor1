@@ -1,27 +1,45 @@
-﻿@model IEnumerable<WebUITamhmor.Models.DoctorModel>
+﻿@*@using WebUITamhmor;*@
+@*@model dynamic*@
+@model IEnumerable<WebUITamhmor.Models.DoctorModel>
+@*@model Tuple<DoctorModel, GoogleProfile>*@
+@*@model MultipleModels.Models.VeiwModel*@
+
+
+
 @{
     ViewData["Title"] = "DepartmentDoctor";
 }
 
+<head>
+    <meta name="google-signin-client_id" content="861604544363-p3eog8kh3poagq9go228thrffnv0ohsu.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+</head>
+
 <body>
+    @*<h3 onload="javascript:checkLogin() ></h3onload=" javascript:checkLogin()>*@
 
-    @foreach (var item in Model)
-    {
-        <div class=" container row">
+        
+        
+        @foreach (var item in Model)
+        {
+            
+            <div class=" container row">
 
-            <div class="col-sm-3">
+                <div class="col-sm-3">
 
-                <form class="form-control border border-1 text-center "
-                      style="padding-bottom: 60px; padding-top:20px; margin: 20px; font-size:30px; ">
+                    <form class="form-control border border-1 text-center "
+                          style="padding-bottom: 60px; padding-top:20px; margin: 20px; font-size:30px; ">
 
-                    @Html.DisplayFor(modelItem => item.Ddepartment)
-                </form>
-                <button type="button" class="btn btn-info center-block">@Html.ActionLink("เลือก", "ListDoctor", new { Ddepartment = item.Ddepartment })</button>
+                        @Html.DisplayFor(modelItem => item.Ddepartment)
+                    </form>
+                    <button type="button" class="btn btn-info center-block">@Html.ActionLink("เลือก", "ListDoctor", new { Ddepartment = item.Ddepartment })</button>
+                </div>
+
             </div>
 
-        </div>
 
-    }
+        }
+        
+        
 </body>
-
-

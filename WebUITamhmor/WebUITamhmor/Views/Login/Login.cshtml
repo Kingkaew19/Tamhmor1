@@ -1,5 +1,4 @@
-﻿@model WebUITamhmor.Models.GoogleProfile
-@{
+﻿@{
     ViewData["Title"] = "Login";
 }
 
@@ -12,35 +11,25 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="container  table-bordered" style="margin:20px; padding:50px;">
+    <div class="container table-bordered" style="padding:2rem;">
         <div style="text-align:center">
-            <h2 style="margin:20px">Login</h2>
-            <div class="g-signin2" data-onsuccess="onSignIn" style="margin-left:41%;"></div>
+            <h2>Login</h2>
+            <div class="g-signin2" data-onsuccess="onSignIn" style="width:150px;margin: auto;"></div>
         </div>
     </div>
-    @Html.HiddenFor(model => model.Id, new { id = "id" })
-    @Html.HiddenFor(model => model.Name, new { id = "name" })
-    @Html.HiddenFor(model => model.Image, new { id = "image" })
-    @Html.HiddenFor(model => model.Email, new { id = "email" })
 
+
+    
 </body>
 
 <script>
     function onSignIn(googleUser) {
         var profile = googleUser.getBasicProfile();
-        console.log(googleUser)
+        console.log(profile)
         /*console.log('ID: ' + profile.getId());
-        console.log('Name: ' + profile.getName());
+        console.log('Name: ' + profile.getName());s
         console.log('Image URL: ' + profile.getImageUrl());
         console.log('Email: ' + profile.getEmail());*/
-        $('#id').val(profile.getId());
-        $('#name').val(profile.getName());
-        $('#image').val(profile.getImageUrl());
-        $('#email').val(profile.getEmail());
-        window.location.href = "/DetailDoctor/DepartmentDoctor";
+         window.location.href = "/DetailDoctor/DepartmentDoctor";
     }
 </script>
-
-
-
-

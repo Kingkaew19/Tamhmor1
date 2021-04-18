@@ -6,21 +6,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link href="C:\Users\admin\source\repos\WebUITamhmor\WebUITamhmor\Views\Chat\Style.css" rel="stylesheet"  />
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
 
-    <title>chat</title>
+
+
+
+    <style>
+        .body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Chakra Petch', sans-serif;
+            outline-style: none;
+        }
+
+
+        .box_input {
+            width: 300px;
+            height: 200px;
+            margin: 250px auto;
+            padding: 50px;
+            text-align: center;
+            line-height: 60px;
+            border: 1px solid #c5c5c5;
+            border-radius: 15px;
+        }
+
+            .box_input input {
+                border-radius: 5px;
+                border: none;
+                width: 100%;
+                height: 40px;
+                padding-left: 10px;
+                background-color: #eeeeee;
+            }
+
+            .box_input button {
+                border: none;
+                background-color: paleturquoise;
+                width: 100%;
+                height: 40px;
+                border-radius: 5px;
+            }
+
+        .box_chat {
+            background-color: rgb(238, 238, 238);
+            width: 400px;
+            height: 600px;
+            margin: 50px auto;
+            display: grid;
+            grid-template-rows: 60px 1fr 60px;
+        }
+
+        .top {
+            display: flex;
+            align-items: center;
+            padding-left: 5px;
+            color: black;
+            width: 100%;
+            height: 60px;
+            background-color: paleturquoise;
+        }
+
+        .input_box {
+            width: 100%;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            background-color: paleturquoise;
+            padding: 10px;
+        }
+
+            .input_box input {
+                border: none;
+                height: 100%;
+                width: 85%;
+                padding-left: 10px;
+            }
+
+        .box_messages {
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        .input_box button {
+            margin-left: 5px;
+            height: 100%;
+            width: 15%;
+            border: none;
+            background-color: #00a3cc;
+            color: white;
+            /*border-radius: 0 15px 15px 0;*/
+        }
+
+        .msg_me {
+            background-color: aqua;
+            width: auto;
+            max-width: 70%;
+            padding: 10px;
+            border-radius: 15px 0 15px 15px;
+        }
+
+        .msg_user {
+            background-color: rgb(196, 196, 196);
+            width: auto;
+            max-width: 70%;
+            padding: 10px;
+            border-radius: 0 15px 15px 15px;
+        }
+    </style>
+
 
 
 </head>
 <body>
 
-    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
+    
 
 
 
-    <script src="C:\Users\admin\source\repos\WebUITamhmor\WebUITamhmor\Views\Chat\Chat.js"></script>
+    
     <div class="container">
         <div class="box_chat">
             <div class="top">
@@ -34,8 +143,60 @@
                 <input id="msg_text" type="text" placeholder="พิมพ์ข้อความ...">
                 <button onclick="send()">ส่ง</button>
             </div>
+            <button> @Html.ActionLink("ออก", "DepartmentDoctor", "DetailDoctor")</button>
         </div>
     </div>
 
 </body>
 </html>
+
+<script>
+    var firebaseConfig = {
+        apiKey: "AIzaSyDKcXzhG21zy5XIHJTinT9hddznAEGngdM",
+        authDomain: "tamhomn.firebaseapp.com",
+        databaseURL: "https://tamhomn-default-rtdb.firebaseio.com",
+        projectId: "tamhomn",
+        storageBucket: "tamhomn.appspot.com",
+        messagingSenderId: "919411017243",
+        appId: "1:919411017243:web:8477a079ed18dc5c15dabe",
+        measurementId: "G-BP59ZFJVC9"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+
+
+    var name = localStorage.getItem("name");
+
+    function send() {
+        var msg = document.getElementById('msg_text').value;
+        if (msg != "") {
+            firebase.database().ref("messages").push({
+                msg: msg,
+                sender: name
+
+            }).then(function () {
+                document.getElementById('msg_text').value = "";
+            })
+            console.log(msg);
+        }
+    }
+
+    firebase.database().ref("messages").on("child_added", function (snapshot) {
+        var username = snapshot.val().sender;
+        var msg = snapshot.val().msg;
+        var html = "";
+
+        if (username == name) {
+            html += "<div class='message_me' align='right'><p class='user'>" + username + "</p><p class='msg_me'>" + msg + "</p></div>";
+            document.getElementById("box_messages").innerHTML += html;
+
+        } else {
+            html += "<div class='message_user' align='left'><p class='user'>" + username + "</p><p class='msg_user'>" + msg + "</p></div>";
+            document.getElementById("box_messages").innerHTML += html;
+        }
+
+        var div_obj = document.getElementById("box_messages");
+        div_obj.scrollTop = div_obj.scrollHeight;
+    });
+</script>

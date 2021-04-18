@@ -51,36 +51,41 @@
 
         @foreach (var item in Model)
         {
-            <div class="col" style="margin-right: 300px; font-family: 'Courier New', Courier, monospace;">
-                <p class="row" style="font-size: 30px;">
-                    
-                    @Html.DisplayFor(model => item.Dfname)
-                    @Html.DisplayFor(model => item.Dlname)
-                </p>
+            <div class="col" style="margin-right: 300px; font-family: 'Prompt';">
+                <div class="columns">
+                    <div class="column" style="">
+                        <img src="@Html.DisplayFor(modelItem => item.Dimage)" />
+                    </div>
+                    <div class="column" style="margin-left: 2rem;width:100%;">
+                        <p class="row" style="font-size: 30px;">
 
-                <p class="row" style="font-size: 22px;">แผนก : @Html.DisplayFor(model => item.Ddepartment)</p>
-                <p class="row" >
-                    @if (item.Dsex == 0)
-                    {
-                        <div style="font-size: 22px;">
-                            เพศ : ชาย
-                        </div>
-                    }
-                    else
-                    {
-                        <div style="font-size: 22px;">
-                            เพศ : หญิง
-                        </div>
-                    }
-                </p>
-                <p class="row" style="font-size: 22px;">อายุ : @Html.DisplayFor(model => item.Dage)</p>
-                <p class="row" style="font-size: 22px;">เเพทย์ประจำโรงพยาบาล : @Html.DisplayFor(model => item.Dhospital)</p>
-                <p class="row" style="font-size: 22px;">ความชำนาญเฉพาะทาง : @Html.DisplayFor(model => item.Dexpertise)</p>
-                <p class="row" style="font-size: 22px;">ค่าปรึกษา : @Html.DisplayFor(model => item.Dprice) Bath</p>
+                            @Html.DisplayFor(model => item.Dfname)
+                            @Html.DisplayFor(model => item.Dlname)
+                        </p>
+                        <br />
+                        <p class="row" style="font-size: 22px;">แผนก : @Html.DisplayFor(model => item.Ddepartment)</p>
+                        
+                            @if (item.Dsex == 0)
+                            {
+                                <p class="row" style="font-size: 22px;">เพศ : ชาย</p>
+                            }
+                            else
+                            {
+                                <p class="row" style="font-size: 22px;">เพศ : หญิง</p>
+                            }
+                        
+                        <p class="row" style="font-size: 22px;">อายุ : @Html.DisplayFor(model => item.Dage)</p>
+                        <p class="row" style="font-size: 22px;">เเพทย์ประจำโรงพยาบาล : @Html.DisplayFor(model => item.Dhospital)</p>
+                        <p class="row" style="font-size: 22px;">ความชำนาญเฉพาะทาง : @Html.DisplayFor(model => item.Dexpertise)</p>
+                        <p class="row" style="font-size: 22px;">ค่าปรึกษา : @Html.DisplayFor(model => item.Dprice) Bath</p>
+                    </div>
+                </div>
+                
+                
             </div>
 
             <div style="text-align: right;">
-                <button type="button" class="btn btn-info" style="width: 100px; color: white; font-size: 16px;"> @Html.ActionLink("แชท", "Payment", new { Dprice = item.Dprice }) </button>
+                <button type="button" class="btn btn-info" style="width: 100px; color: white; font-size: 16px;"> @Html.ActionLink("แชท", "Payment", "Payment", new { Dprice = item.Dprice }) </button>
             </div>
         }
     </div>

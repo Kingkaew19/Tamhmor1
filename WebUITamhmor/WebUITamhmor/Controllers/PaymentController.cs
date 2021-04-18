@@ -15,8 +15,9 @@ namespace WebUITamhmor.Controllers
     {
         string Baseurl = "https://localhost:44305";
 
-        public async Task<ActionResult> Payment(string Dprice)
+        public async Task<ActionResult> Payment(String Dprice)
         {
+            //ScriptManager.RegisterStartupScript(this, GetType(), "checkLogin", "checkLogin()", true);
 
             List<DoctorModel> DoctorInfo = new List<DoctorModel>();
             using (var client = new HttpClient())
@@ -41,13 +42,10 @@ namespace WebUITamhmor.Controllers
 
                     //Deserializing the response recieved from web api and storing into the Employee list  
                     var tempData = JsonConvert.DeserializeObject<List<DoctorModel>>(DoctorResponse);
-
-
                     // check Dsex map value
-                    //Debug.WriteLine(DoctorInfo);
+                    Debug.WriteLine(DoctorInfo);
 
                     DoctorInfo.Add(tempData.Find(x => x.Dprice == Dprice));
-
 
 
                 }

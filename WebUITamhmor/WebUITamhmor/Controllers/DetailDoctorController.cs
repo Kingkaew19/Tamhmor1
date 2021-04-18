@@ -5,6 +5,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Dynamic;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -96,9 +97,10 @@ namespace WebUITamhmor.Controllers
         }
 
         public async Task<ActionResult> DepartmentDoctor()
-            {
+        {
+            
 
-                List<DoctorModel> DoctorInfo = new List<DoctorModel>();
+            List<DoctorModel> DoctorInfo = new List<DoctorModel>();
                 using (var client = new HttpClient())
                 {
                     //Passing service base url  
@@ -124,10 +126,15 @@ namespace WebUITamhmor.Controllers
                     // check Dsex map value
                     Debug.WriteLine(DoctorInfo);
 
+                    
+
                 }
 
                     return View(DoctorInfo);
                 }
         }
+
+        
+        
     }
 }
