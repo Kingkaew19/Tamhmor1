@@ -12176,23 +12176,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\admin\\.nuget\\packages\\": {},
+    "C:\\Users\\acer\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\admin\\source\\repos\\WebUITamhmor\\WebUITamhmor\\WebUITamhmor.csproj",
+      "projectUniqueName": "C:\\Users\\acer\\OneDrive\\เดสก์ท็อป\\Project\\Tamhmor1\\WebUITamhmor\\WebUITamhmor\\WebUITamhmor.csproj",
       "projectName": "WebUITamhmor",
-      "projectPath": "C:\\Users\\admin\\source\\repos\\WebUITamhmor\\WebUITamhmor\\WebUITamhmor.csproj",
-      "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\admin\\source\\repos\\WebUITamhmor\\WebUITamhmor\\obj\\",
+      "projectPath": "C:\\Users\\acer\\OneDrive\\เดสก์ท็อป\\Project\\Tamhmor1\\WebUITamhmor\\WebUITamhmor\\WebUITamhmor.csproj",
+      "packagesPath": "C:\\Users\\acer\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\acer\\OneDrive\\เดสก์ท็อป\\Project\\Tamhmor1\\WebUITamhmor\\WebUITamhmor\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
