@@ -6,8 +6,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    @*<link href="Style.css" rel="stylesheet"  />*@
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
+
+
+
+
     <style>
         .body {
             margin: 0;
@@ -16,6 +20,7 @@
             font-family: 'Chakra Petch', sans-serif;
             outline-style: none;
         }
+
 
         .box_input {
             width: 300px;
@@ -113,23 +118,18 @@
             padding: 10px;
             border-radius: 0 15px 15px 15px;
         }
-
-
-
-
     </style>
-    
+
 
 
 </head>
 <body>
 
-    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
+    
 
 
 
-    @*<script src="C:\Users\admin\source\repos\WebUITamhmor\WebUITamhmor\Views\Chat\Chat.js"></script>*@
+    
     <div class="container">
         <div class="box_chat">
             <div class="top">
@@ -143,6 +143,7 @@
                 <input id="msg_text" type="text" placeholder="พิมพ์ข้อความ...">
                 <button onclick="send()">ส่ง</button>
             </div>
+            <button> @Html.ActionLink("ออก", "DepartmentDoctor", "DetailDoctor")</button>
         </div>
     </div>
 

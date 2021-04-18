@@ -11,7 +11,7 @@ namespace back.Tamhmor.api.Services.Implements
     public class DoctorService : IDoctorService
     {
         private readonly IBaseRepository baseRepository;
-        string searchText;
+        
         public DoctorService(IBaseRepository baseRepository)
         {
             this.baseRepository = baseRepository;

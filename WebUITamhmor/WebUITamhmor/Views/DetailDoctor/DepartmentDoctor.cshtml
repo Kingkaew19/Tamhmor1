@@ -19,8 +19,8 @@
 <body>
     @*<h3 onload="javascript:checkLogin() ></h3onload=" javascript:checkLogin()>*@
 
-        <div class="g-signin2" data-onsuccess="onSignIn" hidden></div>
-        <h4 id="GG-Name" style="margin-left:800px;"> </h4>
+        
+        
         @foreach (var item in Model)
         {
             
@@ -41,24 +41,5 @@
 
         }
         
-        <button onclick="signOut();">Sign out</button>
+        
 </body>
-
-<script>
-    function onSignIn(googleUser) {
-        console.log("onSignIn")
-        if (googleUser) {
-            var profile = googleUser.getBasicProfile();
-            $('#GG-Name').html(profile.getName());
-        } else {
-            window.location.href = "/";
-        }
-    }
-    function signOut() {
-        console.log("Sign out function...")
-        var auth2 = gapi.auth2.getAuthInstance();
-        auth2.signOut().then(function () {
-            window.location.href = "/";
-        });
-    }
-</script>
