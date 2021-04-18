@@ -54,7 +54,7 @@ using WebUITamhmor.Models;
             WriteLiteral("\r\n\r\n<!DOCTYPE html>\r\n<html lang=\"en\">\r\n");
             EndContext();
             BeginContext(39, 3010, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7762a20fe7034f64abd010ca6ffdc862", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "51045993865e42ecbce3fe799716057d", async() => {
                 BeginContext(45, 106, true);
                 WriteLiteral("\r\n    <meta charset=\"UTF-8\">\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n");
                 EndContext();
@@ -189,7 +189,7 @@ using WebUITamhmor.Models;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(3051, 551, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b26d38564a924d4dbb3fbf897cf9ab7a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f4647995af584879b6c64d056df94627", async() => {
                 BeginContext(3057, 180, true);
                 WriteLiteral("\r\n    <script src=\"https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js\"></script>\r\n    <script src=\"https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js\"></script>\r\n");
                 EndContext();
